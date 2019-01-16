@@ -15,35 +15,6 @@ export default class ResetPassword extends Component {
     };
   }
 
-//   async componentDidMount() {
-//     await axios
-//       .get('users/reset', {
-//         params: {
-//           resetPasswordToken: this.props.match.params.token,
-//         },
-//       })
-//       .then(response => {
-//         console.log(response);
-//         if (response.data.message === 'password reset link a-ok') {
-//           this.setState({
-//             email: response.data.email,
-//             update: false,
-//             isLoading: false,
-//             error: false,
-//           });
-//         } else {
-//           this.setState({
-//             update: false,
-//             isLoading: false,
-//             error: true,
-//           });
-//         }
-//       })
-//       .catch(error => {
-//         console.log(error.data);
-//       });
-//   }
-
   handleChange = name => event => {
     this.setState({
       [name]: event.target.value,
