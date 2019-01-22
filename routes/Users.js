@@ -286,11 +286,13 @@ users.put('/updatePassword', (req, res, next) => {
           })
           .then(() => {
             console.log('password updated');
+            localStorage.remove('email1');
             res.status(200).send({ message: 'password updated' });
           });
       }
        else {
         console.log('no user exists in db to update');
+           localStorage.remove('email1');
         res.status(404).json('no user exists in db to update');
       }
     });
